@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Git Commands</title>
 </head>
 <body>
 <h1>Git Commands</h1>
