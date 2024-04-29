@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Git Commands</title>
 </head>
 <body>
 <h1>Git Commands</h1>
@@ -37,7 +36,8 @@
 	Git is a tool that's used to manage multiple versions of source code edits that are 
 	then transferred to files in a Git repository
 	Git is a tool that a developer installs locally on their computer
-
+</pre>
+<pre>	
 	GitHub is a web-based Git repository hosting service that offers all of the distributed revision control 
 	and source code management functionality of Git as well as adding its own features
 	It is a collaboration and version control platform for storing and managing code
@@ -68,9 +68,7 @@
 	repository contains all the information about the project, 
 	including history of changes
 	who made the changes,and when the changes were made.
-
 	repository is like digital folder that contains all files,folder,code and documentation for a project
-
 	1 local repository 
 	2 remote repository
 </pre>
@@ -120,16 +118,16 @@
 	git config --global user.name "jakdoe"
 	git config --global user.email "jakdoe@gmail.com"
 </pre>	
-<h4>git version</h4>
+<h4>Git version</h4>
 <pre> 
 	-> git --version
 </pre> 
-<h4>git Initialize</h4>
+<h4>Git Initialize</h4>
 <pre> 
 	The command git init is used to create an empty Git repository. 
-	We have to navigate to our project directory and type the command git init to initialize a Git repository for our local project folder.
+	We have to navigate to our project directory and type the command git init 
+	to initialize a Git repository for our local project folder.
 	Create a local repository.
-
 	-> git init
 	-> git init (repo name)
 </pre> 
@@ -137,348 +135,254 @@
 <pre> 
 	Downloads a project with the entire history from the remote repository.
 	Make a local copy of the server repository.
-	
 	-> git clone project url (remote Url)
 </pre>
-<h4>git status </h4>
+<h4>Git status </h4>
 <pre> 
 	Displays the status of your working directory. Options include new, staged, and 
 	modified files. It will retrieve branch name, current commit identifier, and changes pending commit.
-		
 	-> git status
 </pre>
-<h4>git show</h4>
+<h4>Git show</h4>
 <pre> 
 	The git show command is used to display information about various objects in a Git repository, 
 	such as commits, tags, trees, and blobs. 
-	
 	-> git show
 </pre> 
-<h4>git remote </h4>
+<h4>Git remote </h4>
 <pre> 
 	Once everything is ready on our local system, we can start pushing our code to the 
 	remote (central) repository of the project.
-
 	-> git remote add origin URL
 </pre> 
-<h4>git add</h4>
+<h4>Git add</h4>
 <pre> 
 	Add command is used after checking the status of the files, to add those files to the staging area.
 	Before running the commit command, "git add" is used to add any new or modified files.
 	This will add the specified file(s) into the Git repository.
-
 	-> git add
 	-> git add . (This will take all our files)
 	-> git add index.html
 </pre>
-<h4>git commit</h4>
+<h4>Git commit</h4>
 <pre> 
 	The commit command makes sure that the changes are saved to the local repository.
 	The command "git commit –m (message) allows you to describe everyone and help them understand what has happened.
-
 	-> git commit -m "message details"
 </pre>
-<h4>git commit history</h4>
+<h4>Git commit history</h4>
 <pre> 
 	Display the most recent commits and the status of the head.
-
-	-> git log
-
+	-> git log<br>
 	Display the output as one commit per line.
-
-	-> git log --oneline
-
+	-> git log --oneline<br>
 	Displays the files that have been modified.
-
-	-> git log --stat
-
+	-> git log --stat<br>
 	Display the modified files with location.
-
-	-> git log -p
-
+	-> git log -p<br>
 	Display the modification on each line of a file.
-
-	-> git blame (file name)
-
+	-> git blame (file name)<br>
 	View commit history for a specific directory.
-
-	-> git log -- (directory_path)
-
+	-> git log -- (directory_path)<br>
 	View commit history with graphical representation.
-
-	-> git log --graph --oneline --decorate --all
-
+	-> git log --graph --oneline --decorate --all<br>
 	View commit history for a specific branch.
-
-	-> git log (branch_name)
-
+	-> git log (branch_name)<br>
 	View the last n commits.
-
-	-> git log -n (number_of_commits)
-
+	-> git log -n (number_of_commits)<br>
 	display only the last (most recent) commit.
-
-	-> git log -1
-
+	-> git log -1<br>
 	View commit history for a specific author.
-
 	-> git log --author = author_name
-	-> git log --author= author_name --branches= branch-name
+	-> git log --author= author_name --branches= branch-name<br>
 </pre> 
-<h4>git track changes</h4>
+<h4>Git track changes</h4>
 <pre> 
 	This command shows the file differences which are not yet staged.
 	Show changes between working directory and staging area.
 	Track the changes that have not been staged.
-	
 	-> git diff [file]
-	-> git diff index.html
-
+	-> git diff index.html<br>
 	Track the changes that have staged but not committed.
-
-	-> git diff --staged
-
+	-> git diff --staged<br>
 	Track the changes after committing a file.
-
-	-> git diff HEAD
-
+	-> git diff HEAD<br>
 	Track the changes between two commits.
-
-	-> git diff (commit1-sha) (commit2-sha)
-
+	-> git diff (commit1-sha) (commit2-sha)<br>
 	Git Diff Branches:
-
 	-> git diff (branch 1) (branch 2)
 </pre>
 <h4>Ignoring files</h4>
 <pre>
 	Specify intentionally untracked files that Git should ignore.
-
-	-> touch .gitignore
-
+	-> touch .gitignore<br>
 	List the ignored files.
-
 	-> git status --ignored
 	-> git ls-files --other --ignored --exclude-standard
 </pre>
-<h4>git Branching</h4>
+<h4>Git Branching</h4>
 <pre> 
 	The git branch command is used to determine what branch the local repository is on.
-	
 	Create a new branch.
-
-	-> git branch branch name
-
+	-> git branch branch name<br>
 	List only local branches.
-
-	-> git branch --list
-
+	-> git branch --list<br>
 	List all branches (local and remote).
-
-	-> git branch -a
-
+	-> git branch -a<br>
 	Delete Branch.
-
 	-> git branch -d branch name
-	-> git branch --delete branch name
-
+	-> git branch --delete branch name<br>
 	Delete a remote Branch.
-
-	-> git push origin -delete branch name
-
+	-> git push origin -delete branch name<br>
 	Rename Branch.
-
 	-> git branch -m old branch name  new branch name
 </pre> 
-<h4>git fetch</h4>
+<h4>Git fetch</h4>
 <pre> 
 	Downloads branches and tags from one or more repositories.
-	
 	Fetch the remote repository.
-
-	-> git fetch repository Url
-
+	-> git fetch repository Url<br>
 	Fetch a specific branch.
-
-	->  git fetch branch URL branch name
-
-	Fetch all the branches simultaneously.
-
-	-> git fetch --all
-
+	->  git fetch branch URL branch name<br>
+	Fetch all the branches simultaneously
+	-> git fetch --all<br>
 	Synchronize the local repository.
-
 	-> git fetch origin
 </pre> 
-<h4>git Checkout</h4>
+<h4>Git Checkout</h4>
 <pre> 
 	Downloads branches and tags from one or more repositories.
-	
 	Checkout a branch.
-
-	-> git checkout branch name
-
+	-> git checkout branch name<br>
 	Create a new branch and switch to it.
-
-	-> git checkout -b new_branch_name
-
+	-> git checkout -b new_branch_name<br>
 	Checkout a specific commit (detached HEAD state).
-
-	-> git checkout commit_hash
-
+	-> git checkout commit_hash<br>
 	Switch back to the last branch you were on.
-
-	-> git checkout -
-
+	-> git checkout -<br>
 	Discard unstaged changes in a file.
-
-	-> git checkout -- file_name
-
+	-> git checkout -- file_name<br>
 	Discard all unstaged changes (use with caution).
-
-	-> git checkout .
-
+	-> git checkout .<br>
 	Create a new branch from a remote branch and switch to it.
-
-	-> git checkout -b new_branch_name origin/ remote_branch_name
-
+	-> git checkout -b new_branch_name origin/ remote_branch_name<br>
 	Revert changes to a specific file to match the last commit.
-
-	-> git checkout HEAD -- file_name
-
+	-> git checkout HEAD -- file_name<br>
 	Revert changes to all files in the working directory to match the last commit.
-
-	-> git checkout HEAD -- .
-
+	-> git checkout HEAD -- .<br>
 	Checkout a specific file from another branch (useful for merging specific files from one branch into another).
-
-	-> git checkout branch_name -- file_name
+	-> git checkout branch_name -- file_name<br>
 </pre> 
-<h4>git pull</h4>
+<h4>Git pull</h4>
 <pre> 
 	The git pull command is used to fetch and merge changes from the remote repository to the local repository.
 	The command "git pull origin master" copies all the files from the master branch of the 
 	remote repository to the local repository.
-
 	Pull Changes from a Remote Repository.
-
-	-> git pull
-
+	-> git pull<br>
 	Pull the data from the server.
-
-	-> git pull origin master
-
+	-> git pull origin master<br>
 	Pull Changes from a Specific Remote Branch.
-
-	-> git pull (remote-name) (branch-name)
-
+	-> git pull (remote-name) (branch-name)<br>
 	Pull Changes from a Remote Repository without Merging.
-
-	-> git pull --rebase
-
+	-> git pull --rebase<br>
 	Pull Changes from a Specific Remote Branch without Merging.
-
-	-> git pull --rebase (remote-name) (branch-name)
-
+	-> git pull --rebase (remote-name) (branch-name)<br>
 	Pull Changes from a Remote Repository Verbosely.
-
 	-> git pull --verbose
 </pre> 
-<h4>git push</h4>
+<h4>Git push</h4>
 <pre> 
-	The command git push is used to transfer the commits or pushing the content from the local repository to the remote repository.
+	The command git push is used to transfer the commits or pushing the content
+	from the local repository to the remote repository.
 	git push origin [branch name]
-
-	-> git push -u origin master
-
+	-> git push -u origin master<br>
 	Push Changes to the Default Remote Repository.
-
-	-> git push
-
+	-> git push<br>
 	Push Changes to a Specific Remote Repository.
-	-> git push (remote-name)
-
+	-> git push (remote-name)<br>
 	Push Changes to a Specific Remote Branch.
-
-	-> git push (remote-name) (branch-name)
-
+	-> git push (remote-name) (branch-name)<br>
 	Force Push Changes to Remote Repository.
-
 	-> git push --force
-	-> git push -f
-
+	-> git push -f<br>
 	Push Changes to a Specific Remote Branch and Set Upstream.
-
-	-> git push -u (remote-name) (branch-name)
-
+	-> git push -u (remote-name) (branch-name)<br>
 	Push Changes Verbosely.
-
 	-> git push --verbose
 </pre> 
-<h4>git merge</h4>
+<h4>Git merge</h4>
 <pre> 
-	The git merge command is used to integrate the branches together. The command combines the changes from one branch to another branch.
+	The git merge command is used to integrate the branches together.
+	The command combines the changes from one branch to another branch.
 	-> git merge branch_name   
 </pre> 
-<h4>git remote  </h4>
+<h4>Git remote  </h4>
 <pre> 
 	The git remote command is used to create, view, and delete connections to other repositories. 
 	-> git remote add origin address
 </pre> 
-<h4>git revert</h4>
+<h4>Git revert</h4>
 <pre> 
 	Revert is used to revert some changes. 
 	The git revert command is used to apply revert operation. It is an undo type command.
 	Revert is the command we use when we want to take a 
 	previous commit and add it as a new commit, keeping the log intact.
 </pre> 
-<h4>git rm </h4>
+<h4>Git rm </h4>
 <pre> 
 	This command is used to delete a specific file from the current working directory and stages the deletion. 
 	Dleting a specific file from the  current working directory and stages the deletion.
 	git rm [filename]
 	-> git rm test.php
 </pre>
-<h4>git stash </h4>
+<h4>Git stash </h4>
 <pre> 
 </pre>
-<h4>git cherry pick </h4>
+<h4>Git cherry pick </h4>
 <pre> 
 	Cherry-picking in Git stands for applying some commit from one branch into another branch.
-	In case you made a mistake and committed a change into the wrong branch, but do not want to merge the whole branch. You can revert the commit and apply it on another branch.
+	In case you made a mistake and committed a change into the wrong branch, 
+	but do not want to merge the whole branch. You can revert the commit and apply it on another branch.
 	Cherry-pick is a useful tool, but always it is not a good option.
-	We want to merge a whole branch into another branch. You only need to pick one or two specific commits. To pick some changes into your main project branch from other branches is called cherry-picking.
+	We want to merge a whole branch into another branch. You only need to pick one or two specific commits. 
+	To pick some changes into your main project branch from other branches is called cherry-picking.
 	-> git cherry-pick commit id  
 	-> git cherry-pick 776a7cb605b5f1281f963ea39f70a194f15a92b1	
 </pre>
-<h4>ow to check new branch is created from which branch</h4>
+<h4>How to check new branch is created from which branch</h4>
 <pre>
 	git show-branch --current
 </pre>
 <h4>Git merge and git rebase</h4>
 <pre>
-	1 git merge is that git merge is a way of combining changes from one branch into another, 
-	preserving the history of the source branch
-	1 git rebase is a way of moving the changes from one branch onto another, typically the master branch,
-	and flattening the history by removing unwanted entries.
-
-	2 When using git merge, a new merge commit is created
-	2 git rebase creates a new set of commits applied on top of the target branch, 
-	resulting in a linear history.
-
-	3 git merge is used to join two or more development histories together, 
-	preserving the original history
-	3 git rebase is used to integrate the changes from one branch into another, creating a linear history 
-	and applying changes in a more orderly manner
-
-	4 Functionality: git merge creates a new commit that combines the changes from one branch (the source branch) into another (the destination branch).
-	Commit History: This creates a new merge commit, preserving the commit history of both branches. It shows the point where the two branches diverged and where they were merged.
-	Clarity in History: It maintains a clear linear history but may introduce frequent merge commits, resulting in a more cluttered history, especially in complex projects with many branches.
-
-	4 Functionality: git rebase moves or rewrites the commit history of a branch by applying the commits from one branch onto another branch.
-	Commit History: It reapplies the commits from the source branch onto the tip of the destination branch, creating a new linear history without extra merge commits.
-	Clarity in History: It produces a cleaner and more linear history, as if the changes on the rebased branch were originally made on top of the destination branch. However, 
-	it rewrites commit history, which could potentially cause conflicts or difficulties for collaborators who also have the old commits.
+	git merge is that git merge is a way of combining changes from one branch into another, 
+	preserving the history of the source branch<br>
+	git rebase is a way of moving the changes from one branch onto another, 
+	typically the master branch,
+	and flattening the history by removing unwanted entries.<br>
+	When using git merge, a new merge commit is created<br>
+	git rebase creates a new set of commits applied on top of the target branch, 
+	resulting in a linear history.<br>
+	git merge is used to join two or more development histories together, 
+	preserving the original history<br>
+	git rebase is used to integrate the changes from one branch into another,
+	creating a linear history 
+	and applying changes in a more orderly manner<br>
+	Functionality: git merge creates a new commit that combines the changes from one branch (the source branch)
+	into another (the destination branch).
+	Commit History: This creates a new merge commit, preserving the commit history of both branches.
+	It shows the point where the two branches diverged and where they were merged.
+	Clarity in History: It maintains a clear linear history but may introduce frequent merge commits, 
+	resulting in a more cluttered history, especially in complex projects with many branches.<br>
+	Functionality: git rebase moves or rewrites the commit history of a branch by applying the commits 
+	from one branch onto another branch.
+	Commit History: It reapplies the commits from the source branch onto the tip of the destination branch, 
+	creating a new linear history without extra merge commits.
+	Clarity in History: It produces a cleaner and more linear history, 
+	as if the changes on the rebased branch were originally made on top of the destination branch. However, 
+	it rewrites commit history, which could potentially cause conflicts or.
+	difficulties for collaborators who also have the old commits.
 </pre>
 </body>
 </html>
