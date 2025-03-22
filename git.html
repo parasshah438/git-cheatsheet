@@ -69,19 +69,22 @@
 	repository contains all the information about the project, 
 	including history of changes
 	who made the changes,and when the changes were made.
-	repository is like digital folder that contains all files,folder,code and documentation for a project
+	repository is like digital folder that contains
+	all files,folder,code and documentation for a project
 	1 local repository 
 	2 remote repository
 </pre>
 <h4>Differences between Local and remote repository</h4>
 <pre>
 	Local repository is copy of the repository that exists on your computer.
-	Remote repository is copy of the repository that exists on a separate serve or hosting service
+	Remote repository is copy of the repository
+	that exists on a separate serve or hosting service
 	such as github,gitlab or bitucket.
 </pre>
 <h4>What is git directory</h4>
 <pre>
-	Git directory is a hidden directory that git users to store all the mete data and object database for git repository
+	Git directory is a hidden directory that git users to store all 
+	the mete data and object database for git repository
 </pre>
 <h4>Untracked file</h4>
 <pre>
@@ -109,12 +112,14 @@
 <h4>Staged</h4>
 <pre>
 	The staged area is where you prepare changes to be included in the next commit.
-	After making changes to files in your working directory, you can stage them using the git add command.
+	After making changes to files in your working directory,
+	you can stage them using the git add command.
  	This marks the changes to be included in the next commit.
 </pre>
 <h4>Snapshot</h4>
 <pre>
-	Each commit in a git repository is unique snapshot that represents a specific version of the project.
+	Each commit in a git repository is unique snapshot
+	that represents a specific version of the project.
 </pre>
 <h4>View Configure git</h4>
 <pre>
@@ -149,7 +154,8 @@
 <h4>Git status</h4>
 <pre> 
 	Displays the status of your working directory. Options include new, staged, and 
-	modified files. It will retrieve branch name, current commit identifier, and changes pending commit.
+	modified files. It will retrieve branch name, 
+	current commit identifier, and changes pending commit.
 	-> git status
 </pre>
 <h4>Git show</h4>
@@ -176,7 +182,8 @@
 <h4>Git commit</h4>
 <pre> 
 	The commit command makes sure that the changes are saved to the local repository.
-	The command "git commit –m (message) allows you to describe everyone and help them understand what has happened.
+	The command "git commit –m (message) allows you to describe everyone 
+	and help them understand what has happened.
 	-> git commit -m "message details"
 </pre>
 <h4>Git commit history</h4>
@@ -279,13 +286,16 @@
 	-> git checkout HEAD -- file_name<br>
 	Revert changes to all files in the working directory to match the last commit.
 	-> git checkout HEAD -- .<br>
-	Checkout a specific file from another branch (useful for merging specific files from one branch into another).
+	Checkout a specific file from another branch 
+	(useful for merging specific files from one branch into another).
 	-> git checkout branch_name -- file_name<br>
 </pre> 
 <h4>Git pull</h4>
 <pre> 
-	The git pull command is used to fetch and merge changes from the remote repository to the local repository.
-	The command "git pull origin master" copies all the files from the master branch of the 
+	The git pull command is used to fetch and merge changes from the 
+	remote repository to the local repository.
+	The command "git pull origin master" copies
+	all the files from the master branch of the 
 	remote repository to the local repository.
 	Pull Changes from a Remote Repository.
 	-> git pull<br>
@@ -347,8 +357,9 @@
 </pre> 
 <h4>Git rm</h4>
 <pre> 
-	This command is used to delete a specific file from the current working directory and stages the deletion. 
-	Dleting a specific file from the  current working directory and stages the deletion.
+	This command is used to delete a specific file from the 
+	current working directory and stages the deletion. 
+	Deleting a specific file from the  current working directory and stages the deletion.
 	git rm [filename]
 
 	-> git rm test.php
@@ -360,10 +371,16 @@
 <pre> 
 	Cherry-picking in Git stands for applying some commit from one branch into another branch.
 	In case you made a mistake and committed a change into the wrong branch, 
-	but do not want to merge the whole branch. You can revert the commit and apply it on another branch.
+	but do not want to merge the whole branch.
+
+	You can revert the commit and apply it on another branch.
 	Cherry-pick is a useful tool, but always it is not a good option.
-	We want to merge a whole branch into another branch. You only need to pick one or two specific commits. 
-	To pick some changes into your main project branch from other branches is called cherry-picking.
+
+	We want to merge a whole branch into another branch.
+	You only need to pick one or two specific commits. 
+
+	To pick some changes into your main project branch from 
+	other branches is called cherry-picking.
 
 	-> git cherry-pick commit id  
 	-> git cherry-pick 776a7cb605b5f1281f963ea39f70a194f15a92b1	
@@ -371,36 +388,6 @@
 <h4>How to check new branch is created from which branch</h4>
 <pre>
 	-> git show-branch --current
-</pre>
-<h4>Git merge and git rebase</h4>
-<pre>
-	git merge is that git merge is a way of combining changes from one branch into another, 
-	preserving the history of the source branch<br>
-	git rebase is a way of moving the changes from one branch onto another, 
-	typically the master branch,
-	and flattening the history by removing unwanted entries.<br>
-	When using git merge, a new merge commit is created<br>
-	git rebase creates a new set of commits applied on top of the target branch, 
-	resulting in a linear history.<br>
-	git merge is used to join two or more development histories together, 
-	preserving the original history<br>
-	git rebase is used to integrate the changes from one branch into another,
-	creating a linear history 
-	and applying changes in a more orderly manner<br>
-	Functionality: git merge creates a new commit that combines the changes from one branch (the source branch)
-	into another (the destination branch).
-	Commit History: This creates a new merge commit, preserving the commit history of both branches.
-	It shows the point where the two branches diverged and where they were merged.
-	Clarity in History: It maintains a clear linear history but may introduce frequent merge commits, 
-	resulting in a more cluttered history, especially in complex projects with many branches.<br>
-	Functionality: git rebase moves or rewrites the commit history of a branch by applying the commits 
-	from one branch onto another branch.
-	Commit History: It reapplies the commits from the source branch onto the tip of the destination branch, 
-	creating a new linear history without extra merge commits.
-	Clarity in History: It produces a cleaner and more linear history, 
-	as if the changes on the rebased branch were originally made on top of the destination branch. However, 
-	it rewrites commit history, which could potentially cause conflicts or.
-	difficulties for collaborators who also have the old commits.
 </pre>
 </body>
 </html>
