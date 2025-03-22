@@ -172,10 +172,9 @@
 </pre> 
 <h4>Git add</h4>
 <pre> 
-	Add command is used after checking the status of the files, to add those files to the staging area.
-	Before running the commit command, "git add" is used to add any new or modified files.
-	This will add the specified file(s) into the Git repository.
-	-> git add
+	Add command is used after checking the status of the files,
+	to add those files to the staging area.
+	-> git add file name
 	-> git add . (This will take all our files)
 	-> git add index.html
 </pre>
