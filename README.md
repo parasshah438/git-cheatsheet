@@ -31,14 +31,15 @@
 </pre>
 <h4>Different between git & github</h4>
 <pre>
-	Git is a distributed version control system for tracking changes in source code during software development.
+	Git is a distributed version control system for tracking changes.
 	Git is a version control system to track changes in source code
 	Git is a tool that's used to manage multiple versions of source code edits that are 
 	then transferred to files in a Git repository
 	Git is a tool that a developer installs locally on their computer
 </pre>
 <pre>	
-	GitHub is a web-based Git repository hosting service that offers all of the distributed revision control 
+	GitHub is a web-based Git repository hosting service that offers
+	all of the distributed revision control 
 	and source code management functionality of Git as well as adding its own features
 	It is a collaboration and version control platform for storing and managing code
 	GitHub is a centralized source code hosting service
@@ -80,12 +81,20 @@
 </pre>
 <h4>What is git directory</h4>
 <pre>
-	Git directory is a hidden directory that git users to store all the metedata and object database for git repository
+	Git directory is a hidden directory that git users to store all the mete data and object database for git repository
 </pre>
 <h4>Untracked file</h4>
 <pre>
 	Untracked file is file in your git repository that git is not currently aware of tracking
 	Git is not monitoring the file for changes and the file is not included in git history or commits
+
+	-f stands for "force" and is required to actually delete the files.
+	-d allows Git to remove untracked directories in addition to untracked files.
+	If you want to see what will be removed before actually deleting the files,
+	you can use the -n (dry run) option:
+
+	To remove untracked files and directories
+	-> git clean -fd
 </pre>
 <h4>Tracked file</h4>
 <pre>
@@ -95,7 +104,7 @@
 <pre>
 	Unstaged refers to changes that you have made to your files in git repository that 
 	have not yet been added to the staging area using the git add command.
-	Changes you are made have not yet beenn included in the next commit.
+	Changes you are made have not yet been included in the next commit.
 </pre>
 <h4>Staged</h4>
 <pre>
@@ -109,14 +118,14 @@
 </pre>
 <h4>View Configure git</h4>
 <pre>
-	git config --global user.name
-	git config --global user.email
-	git config --global --list (View All Global Configuration)
+	-> git config --global user.name
+	-> git config --global user.email
+	-> git config --global --list (View All Global Configuration)
 </pre>	
 <h4>Set Configure git</h4>
 <pre>
-	git config --global user.name "jakdoe"
-	git config --global user.email "jakdoe@gmail.com"
+	-> git config --global user.name "jakdoe"
+	-> git config --global user.email "jakdoe@gmail.com"
 </pre>	
 <h4>Git version</h4>
 <pre> 
@@ -137,7 +146,7 @@
 	Make a local copy of the server repository.
 	-> git clone project url (remote Url)
 </pre>
-<h4>Git status </h4>
+<h4>Git status</h4>
 <pre> 
 	Displays the status of your working directory. Options include new, staged, and 
 	modified files. It will retrieve branch name, current commit identifier, and changes pending commit.
@@ -149,7 +158,7 @@
 	such as commits, tags, trees, and blobs. 
 	-> git show
 </pre> 
-<h4>Git remote </h4>
+<h4>Git remote</h4>
 <pre> 
 	Once everything is ready on our local system, we can start pushing our code to the 
 	remote (central) repository of the project.
@@ -317,7 +326,7 @@
 	The command combines the changes from one branch to another branch.
 	-> git merge branch_name   
 </pre> 
-<h4>Git remote  </h4>
+<h4>Git remote</h4>
 <pre> 
 	The git remote command is used to create, view, and delete connections to other repositories. 
 	-> git remote add origin address
@@ -326,17 +335,25 @@
 <pre> 
 	Revert is used to revert some changes. 
 	The git revert command is used to apply revert operation. It is an undo type command.
-	Revert is the command we use when we want to take a 
-	previous commit and add it as a new commit, keeping the log intact.
+	
+	To revert all the changes in your working directory
+	-> git checkout -- .
+	
+	To revert a specific file
+	-> git checkout -- user.php
+	
+	To revert a specific commit
+	-> git revert commit_id
 </pre> 
-<h4>Git rm </h4>
+<h4>Git rm</h4>
 <pre> 
 	This command is used to delete a specific file from the current working directory and stages the deletion. 
 	Dleting a specific file from the  current working directory and stages the deletion.
 	git rm [filename]
+
 	-> git rm test.php
 </pre>
-<h4>Git stash </h4>
+<h4>Git stash</h4>
 <pre> 
 </pre>
 <h4>Git cherry pick </h4>
@@ -347,12 +364,13 @@
 	Cherry-pick is a useful tool, but always it is not a good option.
 	We want to merge a whole branch into another branch. You only need to pick one or two specific commits. 
 	To pick some changes into your main project branch from other branches is called cherry-picking.
+
 	-> git cherry-pick commit id  
 	-> git cherry-pick 776a7cb605b5f1281f963ea39f70a194f15a92b1	
 </pre>
 <h4>How to check new branch is created from which branch</h4>
 <pre>
-	git show-branch --current
+	-> git show-branch --current
 </pre>
 <h4>Git merge and git rebase</h4>
 <pre>
