@@ -365,6 +365,60 @@
 </pre>
 <h4>Git stash</h4>
 <pre> 
+	git stash is a powerful command used to temporarily save changes in your working directory and revert to the latest commit.
+	This is useful when you need to switch contexts or branches,
+	but don’t want to commit incomplete work.
+
+	-> git stash
+
+	Git will save your changes and clean your working directory.
+</pre>
+<h4>Git stash Other Commands</h4>
+<pre>
+	Show stash list
+	-> git stash list
+
+	Apply the most recent stash
+	-> git stash apply
+
+	Apply a specific stash
+	-> git stash apply stash@{n}
+
+	Pop the most recent stash
+	-> git stash pop
+
+	Pop a specific stash
+	-> git stash pop stash@{n}
+
+	Show the changes in the most recent stash.
+	-> git stash show
+
+	Show changes in a specific stash
+	-> git stash show -p stash@{n}
+
+	Remove a specific stash
+	-> git stash drop stash@{n}
+
+	Clear all stashes
+	-> git stash clear
+
+	Creating a New Branch with Stash Applied:
+	-> git stash branch new-feature-branch
+
+	Stash with a custom message:
+	-> git stash save "message"
+
+	Stash with untracked files
+	-> git stash save --include-untracked
+
+	Stash everything including ignored files
+	-> git stash save --all
+
+	Stash while keeping staged files
+	-> git stash save --keep-index
+
+	List stashes with a pattern
+	-> git stash list --grep="pattern"
 </pre>
 <h4>Git cherry pick </h4>
 <pre> 
